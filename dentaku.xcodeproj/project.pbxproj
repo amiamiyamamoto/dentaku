@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E73924351FEA6A550027B742 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73924341FEA6A550027B742 /* ResultViewController.swift */; };
 		E7944E611FD10A47001C42F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7944E601FD10A47001C42F1 /* AppDelegate.swift */; };
 		E7944E631FD10A47001C42F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7944E621FD10A47001C42F1 /* ViewController.swift */; };
 		E7944E661FD10A47001C42F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7944E641FD10A47001C42F1 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E73924341FEA6A550027B742 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E7944E5D1FD10A47001C42F1 /* dentaku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dentaku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7944E601FD10A47001C42F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7944E621FD10A47001C42F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				E7944E601FD10A47001C42F1 /* AppDelegate.swift */,
 				E7944E621FD10A47001C42F1 /* ViewController.swift */,
 				E7944E641FD10A47001C42F1 /* Main.storyboard */,
+				E73924341FEA6A550027B742 /* ResultViewController.swift */,
 				E7944E671FD10A47001C42F1 /* Assets.xcassets */,
 				E7944E691FD10A47001C42F1 /* LaunchScreen.storyboard */,
 				E7944E6C1FD10A47001C42F1 /* Info.plist */,
@@ -138,6 +141,7 @@
 			files = (
 				E7944E631FD10A47001C42F1 /* ViewController.swift in Sources */,
 				E7944E611FD10A47001C42F1 /* AppDelegate.swift in Sources */,
+				E73924351FEA6A550027B742 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
