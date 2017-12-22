@@ -14,26 +14,34 @@ class ResultViewController: UIViewController {
     var rightNum:String = ""
     var ope:String      = ""
     
-    //演算子を格納するDictionaryの変数
-    let operatorDic:Dictionary = ["＋":"+", "−":"-", "✕":"*", "÷":"/"]
+    //計算式を表示させるLabel
+    @IBOutlet weak var formula: UILabel!
     
     //結果を格納する変数
-    var result:Float? = 0
+    var result:Float = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        switch ope {
-        case "＋":
-            result = 
-        case "−":
-            "引き算"
-        case "＋":
-            "足し算"
-        case "＋":
-            "足し算"
-        default:
-            <#code#>
+        if let lNum = Float(letfNum){
+            if let rNum = Float(rightNum){
+                switch ope {
+                case "＋":
+                    result = lNum + rNum
+                case "−":
+                    result = lNum - rNum
+                case "✕":
+                    result = lNum * rNum
+                case "÷":
+                    result = lNum / rNum
+
+                default:
+                    result = 0
+                }
+                
+                //計算式を表示させる
+                formula.text = letfNum + "　" + ope + "　" + rightNum + "　＝　" + String(result)
+            }
         }
         
     }

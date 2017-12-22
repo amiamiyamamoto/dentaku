@@ -33,6 +33,29 @@ class ViewController: UIViewController {
     func tapOpeButton(_ text:String) {
         ope.text = text
         rightNumField.becomeFirstResponder()
+        
+        //userDefaultに保存
+        let ud = UserDefaults.standard
+        ud.set(ope.text!, forKey: "ope")
+        ud.synchronize()
+    }
+    
+    //左のテキストフィールドに数字が入力された時にuserDefaultに保存する
+    @IBAction func inputLeftNum(_ sender: Any) {
+        if let leftNum = leftNumField.text {
+            let ud = UserDefaults.standard
+            ud.set(leftNum, forKey: "leftNum")
+            ud.synchronize()
+        }
+    }
+    
+    //左のテキストフィールドに数字が入力された時にuserDefaultに保存する
+    @IBAction func inputRightNum(_ sender: Any) {
+        if let rightNum = rightNumField.text {
+            let ud = UserDefaults.standard
+            ud.set(rightNum, forKey: "rightNum")
+            ud.synchronize()
+        }
     }
     
     //次のページに情報を渡す処理
@@ -57,10 +80,35 @@ class ViewController: UIViewController {
         leftNumField.text  = ""
         rightNumField.text = ""
         ope.text = "＋"
+        
+        //userDefaultの値を更新
+        let ud = UserDefaults.standard
+        ud.set("", forKey: "leftNum")
+        ud.set("", forKey: "rightNum")
+        ud.set("＋", forKey: "ope")
+        ud.synchronize()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //textFieldにuserDefaultの値を格納する
+        let ud = UserDefaults.standard
+        if let udOpe = ud.string(forKey: "ope") {
+            ope.text = udOpe
+        }
+        if let leftNum = ud.string(forKey: "leftNum") {
+            leftNumField.text = leftNum
+        }
+        if let rightNum = ud.string(forKey: "rightNum") {
+            rightNumField.text = rightNum
+        }
+        
+        //左側Field
+        //右側Field
+        
+        
+        
         
         //キーボードタイプを数字入力のみに変更
         self.leftNumField.keyboardType  = UIKeyboardType.numberPad
